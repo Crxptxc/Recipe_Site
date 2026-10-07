@@ -27,11 +27,13 @@
     --category-veg: #298f3f;
     --category-misc: #9a951e;
     --category-pasta: #bf5b23;
-    --category-deserts: #9374eb;
+    --category-desserts: #9374eb;
 
 }
 
 /* data-category attributes */
+
+/* seafood */
 div[data-category="seafood"] {
     border-left: 1px solid var(--category-seafood);
 }
@@ -43,6 +45,85 @@ p[data-category="seafood"] {
 span[data-category="seafood"] {
     color: var(--category-seafood);
 }
+
+/* chicken */
+div[data-category="chicken"] {
+    border-left: 1px solid var(--category-chicken);
+}
+
+p[data-category="chicken"] {
+    color: var(--category-chicken);
+}
+
+span[data-category="chicken"] {
+    color: var(--category-chicken);
+}
+
+/* meats */
+div[data-category="beef/pork"] {
+    border-left: 1px solid var(--category-meats);
+}
+
+p[data-category="beef/pork"] {
+    color: var(--category-meats);
+}
+
+span[data-category="beef/pork"] {
+    color: var(--category-meats);
+}
+
+/* veg */
+div[data-category="vegetarian"] {
+    border-left: 1px solid var(--category-veg);
+}
+
+p[data-category="vegetarian"] {
+    color: var(--category-veg);
+}
+
+span[data-category="vegetarian"] {
+    color: var(--category-veg);
+}
+
+/* snacks */
+div[data-category="snack"] {
+    border-left: 1px solid var(--category-misc);
+}
+
+p[data-category="snack"] {
+    color: var(--category-misc);
+}
+
+span[data-category="snack"] {
+    color: var(--category-misc);
+}
+
+/* pasta */
+div[data-category="pasta"] {
+    border-left: 1px solid var(--category-pasta);
+}
+
+p[data-category="pasta"] {
+    color: var(--category-pasta);
+}
+
+span[data-category="pasta"] {
+    color: var(--category-pasta);
+}
+
+/* Dessert */
+div[data-category="dessert"] {
+    border-left: 1px solid var(--category-desserts);
+}
+
+p[data-category="dessert"] {
+    color: var(--category-desserts);
+}
+
+span[data-category="dessert"] {
+    color: var(--category-desserts);
+}
+
 
 * {
     margin: 0;
@@ -139,7 +220,7 @@ body {
     min-height: 600px;
     height: auto;
     margin: 0;
-    background-image: url("https://picsum.photos/1920/800");
+    background-image: url("../images/hero.jpg");
     background-size: cover;
     background-position: center;
 }
@@ -181,6 +262,11 @@ h6 {
     position: relative;
     display: flex;
     align-items: center;
+    margin-bottom: 10px;
+}
+
+.search-box p {
+    font-size: 12px;
 }
 
 .search-input {
@@ -232,6 +318,7 @@ h6 {
     text-transform: uppercase;
     font-weight: 700;
     margin-top: 70px;
+    margin-bottom: 30px;
 }
 
 .todays-recipes-content {
@@ -314,6 +401,9 @@ h6 {
     color: var(--primary-color);
 }
 
+
+/* Categories */
+
 .categories {
     width: var(--width-12col);
 }
@@ -349,7 +439,7 @@ h6 {
     height: 600px;
     display: flex;
     justify-content: center;
-    background-image: url("https://picsum.photos/1920/600");
+    background-image: url("../images/cropped-allstar.jpg");
     background-size: cover;
     background-position: center;
     clip-path: polygon(0 0, 100% 13%, 100% 100%, 0% 100%);
@@ -374,47 +464,179 @@ h6 {
 .image-section-box h4 {
     color: var(--primary-color);
     text-transform: uppercase;
-    font-size: 16px;
+    font-size: 22px;
     font-weight: 700;
     padding: 0 0 10px 0;
+    margin-top: 40px;
 }
 
 .image-section-box p {
-    font-size: 14px;
+    font-size: 16px;
     color: var(--color-dark);
+    margin-bottom: 10px;
 }
+
 
 /* In the kitchen */
 
 .content-area-content {
     display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: var(--width-12col);
+ }
+
+.content-area-block {
     width: 50%;
-    height: 380px;
+    height: 400px;
     background-color: var(--bg-color-light);
     color: var(--color-dark);
-}
-
-.content-area-box {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 }
 
-.content-area-box-top {
-    height: 200px;
-    width: 50%;
+.content-area-block-top {
+    width: 55%;
+    transform: translateX(-20px);
+    margin-bottom: 30px;
 }
 
-.content-area-box-top h2 {
+.content-area-block-top h4 {
+    border-left: 2px solid var(--primary-color);
+    padding: 0px 10px;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.content-area-block-top h3 {
     margin: 10px 0;
     color: var(--primary-color);
     text-transform: uppercase;
+    font-weight: 700;
+    font-size: 22px;
 }
 
-.content-area-box-top h4 {
-    border-left: 2px solid var(--primary-color);
-    padding: 0px 10px;
+.content-area-block-top p {
+    font-size: 16px;
 }
 
-.content-area-box-bottom {}
+.content-area-block-bottom {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.content-area-block-bottom button {
+    width: 30%;
+    background-color: var(--color-dark);
+    transform: translateX(-95px);
+    color: var(--color-light);
+    font-size: 18px;
+    font-weight: 400;
+    text-transform: uppercase;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 1px 1px 3px #00000040;
+}
+
+.content-area-block-image img {
+    display: block;
+    width: 600px;
+    height: 400px;
+    background-size: cover;
+    background-position: center;
+}
+
+/* Footer */
+
+.footer {
+    width: var(--width-full);
+    height: 200px;
+    background-color: var(--primary-color);
+    color: var(--color-dark );
+    padding: 50px 80px;
+    margin-top: 240px;
+}
+
+.footer-content {
+    display: flex;
+}
+
+.footer-content-left {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    border-right: 1px solid var(--color-white);
+}
+
+.socials {
+    width: 50%;
+}
+
+.media-type {
+    display: flex;
+    align-items: center;
+    margin: 10px;
+    gap: 10px;
+    font-size: 16px;
+}
+
+.media-type a {
+    color: var(--color-dark);
+    text-decoration: none;
+}
+
+.media-type-icon svg {
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.menu-links {
+    width: 50%;
+}
+
+.footer-content-left ul li {
+    list-style: none;
+    margin: 10px;
+    font-size: 16px;
+}
+
+.footer-content-left ul li a {
+    text-decoration: none;
+    color: var(--color-dark);
+}
+
+.footer-content-right {
+    display: flex;
+    width: 50%;
+    flex-direction: column;
+    align-items: flex-end;
+    text-align: right;
+}
+
+.spotify-links li {
+    list-style: none;
+    margin: 10px;
+}
+
+.spotify-links li a {
+    color: var(--color-light);
+}
+
+
+.etsy {
+    display: flex;
+    margin-top: 20px;
+}
+
+.etsy-icon {
+    display: flex;
+    align-self: center;
+    font-size: 35px;
+    margin-right: 15px;
+}
