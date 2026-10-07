@@ -1,4 +1,4 @@
-/* Robot Font */
+/* Roboto Font */
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
 :root {
@@ -28,7 +28,6 @@
     --category-misc: #9a951e;
     --category-pasta: #bf5b23;
     --category-desserts: #9374eb;
-
 }
 
 /* data-category attributes */
@@ -457,7 +456,7 @@ h6 {
     grid-row: 2;
     background-color: var(--bg-color-light);
     grid-column: 9 / span 4;
-    padding: 20px;
+    padding: 30px;
     border-radius: 5px;
 }
 
@@ -473,7 +472,6 @@ h6 {
 .image-section-box p {
     font-size: 16px;
     color: var(--color-dark);
-    margin-bottom: 10px;
 }
 
 
@@ -540,6 +538,12 @@ h6 {
     border: none;
     border-radius: 5px;
     box-shadow: 1px 1px 3px #00000040;
+    transition: 0.3s;
+}
+
+.content-area-block-bottom button:hover {
+    background-color: var(--primary-color);
+    color: var(--color-dark);
 }
 
 .content-area-block-image img {
@@ -588,6 +592,12 @@ h6 {
 .media-type a {
     color: var(--color-dark);
     text-decoration: none;
+    transition: 0.3s;
+}
+
+.media-type a:hover {
+    color: var(--color-light);
+    text-decoration: underline;
 }
 
 .media-type-icon svg {
@@ -609,6 +619,12 @@ h6 {
 .footer-content-left ul li a {
     text-decoration: none;
     color: var(--color-dark);
+    transition: 0.3s;
+}
+
+.footer-content-left ul li a:hover {
+    text-decoration: underline;
+    color: var(--color-light);
 }
 
 .footer-content-right {
@@ -626,8 +642,12 @@ h6 {
 
 .spotify-links li a {
     color: var(--color-light);
+    transition: 0.3s;
 }
 
+.spotify-links li a:hover {
+    color: var(--color-dark);
+}
 
 .etsy {
     display: flex;
