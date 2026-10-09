@@ -146,16 +146,9 @@ body {
 
 .navigation,
 .hero,
-.image-section,
+.instructions,
 .footer {
     width: var(--width-full);
-}
-
-.todays-recipes,
-.categories,
-.content-area {
-    width: var(--width-12col);
-    margin: 0 auto;
 }
 
 .navigation {
@@ -218,9 +211,6 @@ body {
     min-height: 600px;
     height: auto;
     margin: 0;
-    /* background-image: url("../images/hero.jpg"); */
-    background-size: cover;
-    background-position: center;
 }
 
 .hero-container {
@@ -230,6 +220,7 @@ body {
     grid-template-columns: repeat(12, 1fr);
     grid-template-rows: auto auto auto;
     gap: var(--grid-gap);
+    position: relative;
 }
 
 .hero-text {
@@ -259,21 +250,37 @@ h6 {
     grid-column: 1 / span 6;
     display: flex;
     justify-content: space-between;
+    margin-top: 50px;
 }
 
 .recipe-information-item {
     display: flex;
+    align-items: center;
     gap: var(--grid-gap);
     font-size: 16px;
+    font-weight: 400;
+}
+
+.recipe-information-icon {
+    display: flex;
+    font-size: 26px;
+    color: var(--primary-color);
 }
 
 .ingredients {
     grid-column: 1 / span 6;
+    margin-top: 50px;
+}
+
+.ingredients-header {
+    font-size: 16px;
+    font-weight: 700;
+    text-transform: uppercase;
 }
 
 .ingredients-list {
     display: flex;
-    list-style: inside;
+    padding: 0px 14px;
 }
 
 .ingredients-list-left {
@@ -284,9 +291,152 @@ h6 {
     width: 50%;
 }
 
+.ingredients-list li {
+    margin: 10px 0px;
+}
+
+.ingredients-buttons {
+    display: flex;
+    margin: 10px 0px;
+}
+
+.ingredients-button {
+    display: flex;
+    margin-right: 5px;
+    border: 1px solid var(--color-light);
+    border-radius: 5px;
+    margin: 5px;
+    padding: 5px;
+}
+
+.ingredients-button-icon {
+    display: flex;
+    align-self: center;
+    font-size: 26px;
+}
+
+.ingredients-button button {
+    background-color: transparent;
+    border: none;
+    color: var(--color-light);
+    text-transform: capitalize;
+    font-size: 16px;
+    padding: 5px;
+}
+
+.circle {
+    border-radius: 50%;
+    height: 500px;
+    background-image: url("../images/hero.jpg");
+    background-size: 290% auto;
+    background-position: 75% 40%;
+    width: 500px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+}
+/* Instructions */
+
+.instructions {
+    display: flex;
+    display: grid;
+    justify-content: center;
+}
+
+.instructions-content {
+    width: var(--width-12col);
+}
+
+.instructions-headline {
+    height: 60px;
+    color: var(--color-light);
+    border-bottom: 1px solid var(--color-light);
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: 37px;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-top: 70px;
+    margin-bottom: 30px;
+}
+
+.instructions-list-grid {
+    grid-template-columns: repeat(12, 1fr);
+    display: grid;
+}
+
+.instructions-list {
+    grid-column: 1 / span 8;
+}
+
+.instructions-list li {
+    color: var(--color-light);
+    margin: 20px;
+    line-height: 30px;
+}
 
 
+/* Instructions (Bonus) */
 
+.bonus-instructions {
+    width: var(--width-full);
+    display: flex;
+    justify-content: center;
+}
+
+.bonus-instructions-container {
+    display: flex;
+    justify-content: space-between;
+    width: var(--width-12col);
+}
+
+.bonus-instructions-content {
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+}
+
+.bonus-instructions-item {
+    display: flex;
+    width: 50%;
+    margin: 10px 0px;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 30px;
+}
+
+.step {
+    writing-mode: sideways-lr;
+    color: var(--primary-color);
+    text-transform: uppercase;
+    font-size: 13px;
+    display: flex;
+    margin-top: 10px;
+    justify-content: flex-end;
+}
+
+.description {
+    color: var(--color-light);
+    margin-left: 20px;
+}
+
+.bonus-ingredients {
+    grid: 9 / span 4;
+}
+
+.bonus-ingredients-content {
+    padding: 10px 0px;
+}
+
+.bonus-ingredients-list li {
+    list-style: none;
+    color: var(--color-light);
+    line-height: 30px;
+    font-size: 14px;
+}
 
 /* Footer */
 
