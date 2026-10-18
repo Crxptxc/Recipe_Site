@@ -343,6 +343,7 @@ h6 {
     display: flex;
     display: grid;
     justify-content: center;
+    margin-top: 30px;
 }
 
 .instructions-content {
@@ -385,6 +386,7 @@ h6 {
     width: var(--width-full);
     display: flex;
     justify-content: center;
+    margin-top: 100px;
 }
 
 .bonus-instructions-container {
@@ -396,12 +398,12 @@ h6 {
 .bonus-instructions-content {
     display: flex;
     flex-direction: column;
-    width: fit-content;
+    width: 70%;
 }
 
 .bonus-instructions-item {
     display: flex;
-    width: 50%;
+    width: 70%;
     margin: 10px 0px;
     font-size: 14px;
     font-weight: 400;
