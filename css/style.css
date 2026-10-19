@@ -482,7 +482,7 @@ h6 {
     flex-direction: row;
     flex-wrap: wrap;
     width: var(--width-12col);
- }
+}
 
 .content-area-block {
     width: 50%;
@@ -558,9 +558,9 @@ h6 {
 
 .footer {
     width: var(--width-full);
-    height: 200px;
+    height: auto;
     background-color: var(--primary-color);
-    color: var(--color-dark );
+    color: var(--color-dark);
     padding: 50px 80px;
     margin-top: 240px;
 }
@@ -659,4 +659,110 @@ h6 {
     align-self: center;
     font-size: 35px;
     margin-right: 15px;
+}
+
+/* RWD Start */
+
+/* Mobile size */
+@media (width <=768px) {
+    :root {
+        --width-12col: 100%;
+    }
+
+    /* Hero */
+    .hero {
+        background-image: none;
+    }
+
+    .hero-text {
+        width: 100%;
+        display: grid;
+        justify-content: center;
+        grid-column: 1 / span 12;
+    }
+
+    .hero-text h4 {
+        font-size: 42px;
+    }
+
+    .hero-text h6 {
+        font-size: 18px;
+    }
+
+    .hero-search {
+        width: 100%;
+        display: grid;
+        justify-content: center;
+        grid-column: 1 / span 12;
+    }
+
+    .search-box {
+        width: 40%;
+    }
+
+    /* Todays Recipes */
+    .todays-recipes {
+        width: 90%;
+    }
+
+    .todays-recipes-content {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .todays-recipes-content-block-image img {
+        width: 100%;
+        height: 300px;
+        object-fit: cover;
+    }
+
+    .categories {
+        width: 90%;
+    }
+
+    /* Categories */
+    .categories-content {
+        flex-wrap: wrap;
+        justify-content: flex-start;
+    }
+
+    .categories-content-block {
+        width: 45%;
+    }
+
+    .image-section {
+        display: none;
+    }
+
+    /* Content-area */
+    .content-area {
+        width: 90%;
+    }
+
+    .content-area-block:has(img) {
+        display: none;
+    }
+
+    .content-area-block {
+        width: 100%;
+        color: var(--color-light);
+        margin-bottom: 20px;
+    }
+
+    .content-area-block:nth-of-type(1) {
+        background-image: url("../images/kitchen-block-2.jpg");
+        background-size: cover;
+        background-position: center;
+    }
+
+    .content-area-block:nth-of-type(4) {
+        background-image: url("../images/kitchen-block-3.jpg");
+        background-size: cover;
+        background-position: center;
+    }
+
+    .content-area-block:nth-of-type(5) {
+        background-image: url("../images/kitchen-block-6.jpg");
+        background-size: cover;
+        background-position: center;
+    }
 }

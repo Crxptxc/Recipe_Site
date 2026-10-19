@@ -355,8 +355,6 @@ h6 {
 }
 
 /* Categories */
-
-
 .categories-result-item {
     padding: 50px 0px;
     border-bottom: 1px solid var(--color-dark);
@@ -369,7 +367,7 @@ h6 {
     padding-left: 10px;
 }
 
-.search-category-header h6 span{
+.search-category-header h6 span {
     text-transform: uppercase;
 }
 
@@ -394,7 +392,7 @@ h6 {
     width: var(--width-full);
     height: 200px;
     background-color: var(--primary-color);
-    color: var(--color-dark );
+    color: var(--color-dark);
     padding: 50px 80px;
     margin-top: 240px;
 }

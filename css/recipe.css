@@ -337,6 +337,7 @@ h6 {
     bottom: 0;
     margin: auto;
 }
+
 /* Instructions */
 
 .instructions {
@@ -420,6 +421,22 @@ h6 {
     justify-content: flex-end;
 }
 
+.bonus-instruction-item ol {
+    list-style-type: none;
+    color: white;
+    counter-reset: steps;
+}
+
+.bonus-instruction-item ol li {
+    counter-increment: steps;
+}
+
+.bonus-instruction-item ol li::before {
+    content: "Step" counter(steps);
+    color: white;
+    writing-mode: sideways-lr;
+}
+
 .description {
     color: var(--color-light);
     margin-left: 20px;
@@ -446,7 +463,7 @@ h6 {
     width: var(--width-full);
     height: 200px;
     background-color: var(--primary-color);
-    color: var(--color-dark );
+    color: var(--color-dark);
     padding: 50px 80px;
     margin-top: 240px;
 }
