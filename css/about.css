@@ -232,16 +232,50 @@ body {
 }
 
 .hero-text {
-    grid-column: 1 / span 4;
+    grid-column: 1 / span 5;
     grid-row: 1;
     margin-top: 200px;
+    display: flex;
+    flex-direction: column;
+}
+
+.hero-text h2 {
+    text-transform: uppercase;
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: var(--primary-color);
+}
+
+.hero-text h6 {
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.inspiration-text {
+    grid-column: 1 / span 5;
+    grid-row: 2;
+}
+
+.inspiration-text-block {
+    margin: 70px 0px;
+}
+
+.inspiration-text-block span {
+    color: var(--primary-color);
+}
+
+.inspiration-text-block h4 {
+    text-transform: uppercase;
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 10px;
 }
 
 
 .hero-image img {
-    grid: 7 / span 6;
     width: 500px;
-    height: 600px;
+    height: 700px;
     position: absolute;
     right: 0;
     top: 0;
@@ -370,7 +404,7 @@ body {
     width: var(--width-full);
     height: 200px;
     background-color: var(--primary-color);
-    color: var(--color-dark );
+    color: var(--color-dark);
     padding: 50px 80px;
     margin-top: 240px;
 }

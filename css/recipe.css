@@ -404,18 +404,14 @@ h6 {
 
 .bonus-instructions-item {
     display: flex;
-    width: 70%;
-    margin: 10px 0px;
     font-size: 14px;
     font-weight: 400;
-    line-height: 30px;
 }
 
 .step {
     writing-mode: sideways-lr;
     color: var(--primary-color);
     text-transform: uppercase;
-    font-size: 13px;
     display: flex;
     margin-top: 10px;
     justify-content: flex-end;
@@ -423,18 +419,28 @@ h6 {
 
 .bonus-instruction-item ol {
     list-style-type: none;
-    color: white;
+    color: var(--color-light);
     counter-reset: steps;
+    line-height: 30px;
 }
 
 .bonus-instruction-item ol li {
     counter-increment: steps;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 70%;
+    margin: 10px 0px;
+    font-size: 14px;
 }
 
 .bonus-instruction-item ol li::before {
-    content: "Step" counter(steps);
-    color: white;
+    content: "STEP " counter(steps);
+    color: var(--primary-color);
     writing-mode: sideways-lr;
+    margin-right: 20px;
+    font-size: 13px;
+    margin-top: 8px;
 }
 
 .description {
